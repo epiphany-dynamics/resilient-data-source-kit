@@ -1,0 +1,24 @@
+{
+  "name": "resilient-data-source-kit",
+  "version": "1.0.0",
+  "description": "Patterns for resilient external data-source integration: scraper backoff/circuit-breaking and fuzzy entity-match confidence scoring.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "demo:scraper": "tsx scraper-resilience/src/demo.ts",
+    "demo:match": "tsx fuzzy-match-confidence/src/demo.ts",
+    "test": "node --test --import tsx scraper-resilience/test/*.test.ts fuzzy-match-confidence/test/*.test.ts",
+    "test:scraper": "node --test --import tsx scraper-resilience/test/*.test.ts",
+    "test:match": "node --test --import tsx fuzzy-match-confidence/test/*.test.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.2"
+  }
+}
